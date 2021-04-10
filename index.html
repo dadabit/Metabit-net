@@ -20,7 +20,17 @@
 			let boxA = Matter.Bodies.rectangle(100, 100, 80, 80);
 			let boxB = Matter.Bodies.rectangle(150, 200, 80, 80);
 
-			Matter.World.add(engine.world, [boxA, boxB, ground]);
+			let mouse = Matter.mouse.create(render.canvas);
+			let mouseConstraint = Matter.mouseConstraint({
+				mouse: mouse,
+				constraint: {
+					render: {visible: false}
+				}
+			});
+
+			render.mouse = mouse;
+
+			Matter.World.add(engine.world, [boxA, boxB, ground, mouseConstraint]);
 			Matter.Engine.run(engine);
 			Matter.Render.run(render);
 		</script>
