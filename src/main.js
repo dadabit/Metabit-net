@@ -11,3 +11,4 @@ let boxb = Matter.Bodies.rectangle(100, 200, 80, 80);
 
 Matter.World.add(engine.world, [boxA, boxB, ground]);
 Matter.Engine.run(engine);
+Matter.Render.run(render);
