@@ -3,4 +3,8 @@ body {
 	border: 0;
 	padding: 0;
 	height: 400vh;
+
+	font-family: Arial, monospace, Impact;
+
+	background: rgb(255, 230, 200);
 }
