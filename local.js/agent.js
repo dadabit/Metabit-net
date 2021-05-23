@@ -3,6 +3,9 @@ class Agent {
 	constructor(x, y) {
 		this.pos = createVector(x, y);
 		this.direction = createVector(0, 1);
+		this.counter = 0;
+		this.color = 255;
+		this.clearTime = 400
 	}
 
 
@@ -10,14 +13,27 @@ class Agent {
 		this.direction.x = random(-1, 1);
 		this.direction.y = random(-1, 1);
 
-		this.direction = this.direction.normalize().mult(5);
+		this.direction = this.direction.normalize().mult(10);
 
 
 		this.pos.add(this.direction);
+
+		this.counter += 1;
+
+		if (this.counter >= this.clearTime) {
+			if (this.color == 255) {
+				this.color = 0;
+			} else {
+				this.color = 255;
+			}
+			this.counter = 0;
+		}
+		
 	}
 
 	show() {
-		stroke(255);
+		fill(this.color);
+		stroke(this.color);
 		ellipse(this.pos.x, this.pos.y, 1, 1);
 	}
 }
