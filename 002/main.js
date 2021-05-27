@@ -2,7 +2,7 @@ cells = [];
 population = 70;
 
 function setup() {
-    createCanvas(800, 800, P2D)
+    createCanvas(windowWidth, windowHeight, P2D)
     background(0);
     
     for (var i = 0; i < population; i++)

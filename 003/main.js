@@ -21,8 +21,4 @@ function draw() {
 	}
 }
 
-function windowResized() {
-  location.reload();
-}
-
 
