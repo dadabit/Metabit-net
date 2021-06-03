@@ -1,3 +1,0 @@
-function windowResized() {
-    location.reload();
-}
