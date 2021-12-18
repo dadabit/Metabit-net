@@ -263,7 +263,16 @@
   color: #ffffff;
 }
 
-#mejpg {
-	width: 30%;
-	padding-left: 10%;
+#about-container {
+    text-align: left;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+#about {
+	position: absolute;
+	bottom: 10%;
+	padding-bottom: 10px;
+	padding-left: 10px;
 }
